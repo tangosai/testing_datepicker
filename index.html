@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+	/*
+	font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+	* {
+		box-sizing: border-box;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	body {
+		width: 100%;
+		height: auto;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	ul {
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+	}
+
+	.samodel {
+		position: absolute;
+		background: #ddd;
+		width: 100%;
+		height: 300px;
+		bottom: 0px;
+		padding: 20px;
+	}
+
+	.picker {
+		position: relative;
+		background: red;
+	}
+	.picker:before,
+		.picker:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2.2em;
+			pointer-events: none;
+		}
+
+		.picker:before {
+			top: -0.2em;
+			background: linear-gradient(white, rgba(255, 255, 255, .7));
+		}
+
+		.picker:after {
+			bottom: -0.2em;
+			height: 2.4em;
+			background: linear-gradient(rgba(255, 255, 255, .7), white);
+		}
+
+
+	.picker-window {
+		position: absolute;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+		height: 30px;
+		left: 0;
+		top: 50%;
+		transform: translateY(-65%);
+		width: 100%;
+		pointer-events: none;
+	}
+
+
+	.picker ul {
+		-ms-overflow-style: none;
+		max-height: 60px;
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+		padding-bottom: 3em;
+		padding-top: 3em;
+	}
+
+	.picker ul::-webkit-scrollbar {
+		display: none;
+	}
+
+	.picker li {
+		scroll-snap-align: center;
+		margin-bottom: 5px;
+		border-bottom: 1px solid;
+		height: 30px;
+		text-align: center;
+		background: rgba(225, 225, 225, 0.3);
+	}
+</style>
+
+<body>
+	<div id="wrapper">
+		<div class="samodel">
+			<div class=""></div>
+			<div class="picker">
+				<div class="picker-window"></div>
+				<ul>
+					<li>adder </li>
+					<li>Tue Jul <span>2</span></li>
+					<li>Wed Jul <span>3</span></li>
+					<li>Thu Jul <span>4</span></li>
+					<li>Fri Jul <span>5</span></li>
+					<li>Sat Jul <span>6</span></li>
+					<li>Sun Jul <span>7</span></li>
+					<li>Mon Jul <span>8</span></li>
+					<li>Tue Jul <span>9</span></li>
+					<li>Wed Jul 10</li>
+					<li>Thu Jul 11</li>
+					<li>Fri Jul 12</li>
+					<li>Sat Jul 13</li>
+					<li>Sun Jul 14</li>
+					<li>Mon Jul 15</li>
+					<li>Tue Jul 16</li>
+					<li>Wed Jul 17</li>
+					<li>Thu Jul 18</li>
+					<li>Fri Jul 19</li>
+					<li>Sat Jul 20</li>
+					<li>Sun Jul 21</li>
+					<li>Mon Jul 22</li>
+					<li>Tue Jul 23</li>
+					<li>Wed Jul 24</li>
+					<li>Thu Jul 25</li>
+					<li>Fri Jul 26</li>
+					<li>Sat Jul 27</li>
+					<li>Sun Jul 28</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body></html>
