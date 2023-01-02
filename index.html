@@ -23,6 +23,7 @@ font-family: 'Roboto', sans-serif;
 		width: 100%;
 		height: auto;
 		font-family: 'Roboto', sans-serif;
+		background: #ddd;
 	}
 
 	ul {
@@ -33,7 +34,7 @@ font-family: 'Roboto', sans-serif;
 
 	.samodel {
 		position: absolute;
-		background: #ddd;
+		background: #fff;
 		width: 100%;
 		height: 300px;
 		bottom: 0px;
@@ -42,33 +43,34 @@ font-family: 'Roboto', sans-serif;
 
 	.picker {
 		position: relative;
-		background: red;
+		background: #fff;
 	}
+
 	.picker:before,
-		.picker:after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 2.2em;
-			pointer-events: none;
-		}
+	.picker:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 2.2em;
+		pointer-events: none;
+	}
 
-		.picker:before {
-			top: -0.2em;
-			background: linear-gradient(white, rgba(255, 255, 255, .7));
-		}
+	.picker:before {
+		top: -0.2em;
+		background: linear-gradient(white, rgba(255, 255, 255, .7));
+	}
 
-		.picker:after {
-			bottom: -0.2em;
-			height: 2.4em;
-			background: linear-gradient(rgba(255, 255, 255, .7), white);
-		}
+	.picker:after {
+		bottom: -0.2em;
+		height: 2.4em;
+		background: linear-gradient(rgba(255, 255, 255, .7), white);
+	}
 
 
 	.picker-window {
 		position: absolute;
-		border-top: 1px solid #fff;
-		border-bottom: 1px solid #fff;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
 		height: 30px;
 		left: 0;
 		top: 50%;
@@ -94,83 +96,90 @@ font-family: 'Roboto', sans-serif;
 	.picker li {
 		scroll-snap-align: center;
 		margin-bottom: 5px;
-		border-bottom: 1px solid;
+/*		border-bottom: 1px solid;*/
 		height: 30px;
 		text-align: center;
-		background: rgba(225, 225, 225, 0.3);
+		background: #fff;
+	}
+	.samodel h6{
+		text-align: center;
 	}
 </style>
 
 <body>
 	<div id="wrapper">
 		<div class="samodel">
-			<div class=""></div>
-			<div class="picker">
-				<div class="picker-window"></div>
-				<ul>
-					<li>adder </li>
-					<li>Tue Jul <span>2</span></li>
-					<li>Wed Jul <span>3</span></li>
-					<li>Thu Jul <span>4</span></li>
-					<li>Fri Jul <span>5</span></li>
-					<li>Sat Jul <span>6</span></li>
-					<li>Sun Jul <span>7</span></li>
-					<li>Mon Jul <span>8</span></li>
-					<li>Tue Jul <span>9</span></li>
-					<li>Wed Jul 10</li>
-					<li>Thu Jul 11</li>
-					<li>Fri Jul 12</li>
-					<li>Sat Jul 13</li>
-					<li>Sun Jul 14</li>
-					<li>Mon Jul 15</li>
-					<li>Tue Jul 16</li>
-					<li>Wed Jul 17</li>
-					<li>Thu Jul 18</li>
-					<li>Fri Jul 19</li>
-					<li>Sat Jul 20</li>
-					<li>Sun Jul 21</li>
-					<li>Mon Jul 22</li>
-					<li>Tue Jul 23</li>
-					<li>Wed Jul 24</li>
-					<li>Thu Jul 25</li>
-					<li>Fri Jul 26</li>
-					<li>Sat Jul 27</li>
-					<li>Sun Jul 28</li>
-				</ul>
+			<div>
+				<h6>Select School</h6>
+				<div class="picker">
+					<div class="picker-window"></div>
+					<ul>
+						<li>adder </li>
+						<li>Tue Jul <span>2</span></li>
+						<li>Wed Jul <span>3</span></li>
+						<li>Thu Jul <span>4</span></li>
+						<li>Fri Jul <span>5</span></li>
+						<li>Sat Jul <span>6</span></li>
+						<li>Sun Jul <span>7</span></li>
+						<li>Mon Jul <span>8</span></li>
+						<li>Tue Jul <span>9</span></li>
+						<li>Wed Jul 10</li>
+						<li>Thu Jul 11</li>
+						<li>Fri Jul 12</li>
+						<li>Sat Jul 13</li>
+						<li>Sun Jul 14</li>
+						<li>Mon Jul 15</li>
+						<li>Tue Jul 16</li>
+						<li>Wed Jul 17</li>
+						<li>Thu Jul 18</li>
+						<li>Fri Jul 19</li>
+						<li>Sat Jul 20</li>
+						<li>Sun Jul 21</li>
+						<li>Mon Jul 22</li>
+						<li>Tue Jul 23</li>
+						<li>Wed Jul 24</li>
+						<li>Thu Jul 25</li>
+						<li>Fri Jul 26</li>
+						<li>Sat Jul 27</li>
+						<li>Sun Jul 28</li>
+					</ul>
+				</div>
 			</div>
-			
-			<div class="picker">
-				<div class="picker-window"></div>
-				<ul>
-					<li>adder </li>
-					<li>Tue Jul <span>2</span></li>
-					<li>Wed Jul <span>3</span></li>
-					<li>Thu Jul <span>4</span></li>
-					<li>Fri Jul <span>5</span></li>
-					<li>Sat Jul <span>6</span></li>
-					<li>Sun Jul <span>7</span></li>
-					<li>Mon Jul <span>8</span></li>
-					<li>Tue Jul <span>9</span></li>
-					<li>Wed Jul 10</li>
-					<li>Thu Jul 11</li>
-					<li>Fri Jul 12</li>
-					<li>Sat Jul 13</li>
-					<li>Sun Jul 14</li>
-					<li>Mon Jul 15</li>
-					<li>Tue Jul 16</li>
-					<li>Wed Jul 17</li>
-					<li>Thu Jul 18</li>
-					<li>Fri Jul 19</li>
-					<li>Sat Jul 20</li>
-					<li>Sun Jul 21</li>
-					<li>Mon Jul 22</li>
-					<li>Tue Jul 23</li>
-					<li>Wed Jul 24</li>
-					<li>Thu Jul 25</li>
-					<li>Fri Jul 26</li>
-					<li>Sat Jul 27</li>
-					<li>Sun Jul 28</li>
-				</ul>
+			<div>
+				<h6>Select  Major</h6>
+				<div class="picker">
+					<div class="picker-window"></div>
+					<ul>
+						<li>adder </li>
+						<li>Tue Jul <span>2</span></li>
+						<li>Wed Jul <span>3</span></li>
+						<li>Thu Jul <span>4</span></li>
+						<li>Fri Jul <span>5</span></li>
+						<li>Sat Jul <span>6</span></li>
+						<li>Sun Jul <span>7</span></li>
+						<li>Mon Jul <span>8</span></li>
+						<li>Tue Jul <span>9</span></li>
+						<li>Wed Jul 10</li>
+						<li>Thu Jul 11</li>
+						<li>Fri Jul 12</li>
+						<li>Sat Jul 13</li>
+						<li>Sun Jul 14</li>
+						<li>Mon Jul 15</li>
+						<li>Tue Jul 16</li>
+						<li>Wed Jul 17</li>
+						<li>Thu Jul 18</li>
+						<li>Fri Jul 19</li>
+						<li>Sat Jul 20</li>
+						<li>Sun Jul 21</li>
+						<li>Mon Jul 22</li>
+						<li>Tue Jul 23</li>
+						<li>Wed Jul 24</li>
+						<li>Thu Jul 25</li>
+						<li>Fri Jul 26</li>
+						<li>Sat Jul 27</li>
+						<li>Sun Jul 28</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
