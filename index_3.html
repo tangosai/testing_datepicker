@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .vlt-site-preloader {
+        position: fixed;
+        z-index: 120;
+        top: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: opacity 300ms, visibility 300ms;
+        -o-transition: opacity 300ms, visibility 300ms;
+        transition: opacity 300ms, visibility 300ms;
+        color: #101010;
+        background-color: #fff;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      #giLogo {
+        animation: fill 2s ease forwards 3s;
+      }
+      #giLogo path:nth-child(1) {
+        stroke-dasharray: 401px;
+        stroke-dashoffset: 401px;
+        animation: line-anim 2s ease forwards;
+      }
+      #giLogo path:nth-child(2) {
+        stroke-dasharray: 185px;
+        stroke-dashoffset: 185px;
+        animation: line-anim 2s ease forwards 0.3s;
+      }
+      #giLogo path:nth-child(3) {
+        stroke-dasharray: 272px;
+        stroke-dashoffset: 272px;
+        animation: line-anim 2s ease forwards 0.6s;
+      }
+      #giLogo path:nth-child(4) {
+        stroke-dasharray: 404px;
+        stroke-dashoffset: 404px;
+        animation: line-anim 2s ease forwards 0.9s;
+      }
+      #giLogo path:nth-child(5) {
+        stroke-dasharray: 510px;
+        stroke-dashoffset: 510px;
+        animation: line-anim 2s ease forwards 1.2s;
+      }
+      @keyframes line-anim {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes fill {
+        from {
+          fill: transparent;
+        }
+        to {
+          fill: #fff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="vlt-site-preloader" style="background: #a52a2a">
+      <svg
+        width="416"
+        height="79"
+        viewBox="0 0 416 79"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        id="giLogo"
+      >
+        <path
+          d="M49.9176 27.2784C49.6098 26.0237 49.1245 24.9228 48.4616 23.9759C47.7987 23.0052 46.9701 22.1885 45.9758 21.5256C45.0052 20.839 43.8688 20.33 42.5667 19.9986C41.2883 19.6435 39.8797 19.4659 38.3409 19.4659C35.0265 19.4659 32.1974 20.259 29.8537 21.8452C27.5336 23.4313 25.758 25.7159 24.527 28.6989C23.3196 31.6818 22.7159 35.2803 22.7159 39.4943C22.7159 43.7557 23.2959 47.4015 24.4559 50.4318C25.616 53.4621 27.3442 55.7822 29.6406 57.3921C31.937 59.0019 34.7897 59.8068 38.1988 59.8068C41.2055 59.8068 43.7031 59.3689 45.6917 58.4929C47.704 57.617 49.2074 56.3741 50.2017 54.7642C51.196 53.1544 51.6932 51.2604 51.6932 49.0824L55.1022 49.4375H38.4829V35.375H70.7272V45.4602C70.7272 52.089 69.3186 57.759 66.5014 62.4702C63.7078 67.1577 59.8489 70.7562 54.9247 73.2656C50.0241 75.7514 44.4015 76.9943 38.0568 76.9943C30.9782 76.9943 24.7637 75.491 19.4133 72.4844C14.0629 69.4778 9.88444 65.1927 6.87781 59.6293C3.89486 54.0658 2.40338 47.4489 2.40338 39.7784C2.40338 33.7652 3.31484 28.4385 5.13776 23.7983C6.98435 19.1581 9.54117 15.2401 12.8082 12.044C16.0753 8.82434 19.8513 6.39773 24.1363 4.76421C28.4214 3.10701 33.0142 2.27841 37.9147 2.27841C42.2235 2.27841 46.2244 2.89394 49.9176 4.12501C53.6344 5.33239 56.9133 7.06061 59.7542 9.30966C62.6188 11.535 64.9271 14.1747 66.6789 17.2287C68.4308 20.2827 69.4962 23.6326 69.875 27.2784H49.9176Z"
+          stroke="white"
+          stroke-width="4"
+        />
+        <path
+          d="M120.178 3.27273V76H100.434V3.27273H120.178Z"
+          stroke="white"
+          stroke-width="4"
+        />
+        <path
+          d="M148.046 19.1818V3.27273H211.257V19.1818H189.382V76H169.921V19.1818H148.046Z"
+          stroke="white"
+          stroke-width="4"
+        />
+        <path
+          d="M248.9 76H227.593L251.599 3.27273H278.587L302.593 76H281.286L265.377 23.3011H264.809L248.9 76ZM257.562 47.3068H264.951H272.624L277.084 62.0796H253.102L257.562 47.3068Z"
+          stroke="white"
+          stroke-width="4"
+        />
+        <path
+          d="M330.098 3.27273H354.671L371.575 44.4659H372.427L389.331 3.27273H413.904V76H394.586V33.9545H394.018L377.825 75.4318H366.177L349.984 33.6705H349.416V76H330.098V3.27273Z"
+          stroke="white"
+          stroke-width="4"
+        />
+      </svg>
+    </div>
+    <script>
+      const gilogo = document.querySelectorAll("#giLogo path");
+
+      for (let i = 0; i < gilogo.length; i++) {
+        console.log(`Letter ${i} is ${gilogo[i].getTotalLength()}`);
+      }
+    </script>
+  </body>
+</html>
