@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      body {
+        @apply bg-slate-900;
+      }
+      .tab-navigation {
+        @apply relative mx-auto flex items-center justify-center max-w-fit;
+      }
+      .tab-menu {
+        @apply mt-5 bg-slate-800 max-w-4xl mx-auto whitespace-nowrap border-b-2 border-slate-700 shadow-2xl shadow-slate-800 p-5 rounded-full overflow-x-scroll select-none scroll-smooth;
+      }
+      .tab-menu.dragging {
+        scroll-behavior: unset;
+      }
+      .tab-menu::-webkit-scrollbar {
+        @apply hidden;
+      }
+      .tab-btn {
+        @apply inline-block text-slate-300 text-base font-medium mx-3 px-5 py-1 rounded-full border border-sky-500 cursor-pointer select-none hover:bg-slate-900 hover:border-slate-900;
+      }
+      /* .tab-menu.dragging .tab-btn {
+        @apply pointer-events-none;
+      } */
+      .tab-btn.active {
+        @apply bg-sky-500;
+      }
+      .left-btn,
+      .right-btn {
+        @apply absolute text-white text-lg p-1 cursor-pointer top-11 rounded-full;
+      }
+      .left-btn {
+        @apply bg-sky-500 -left-3 hidden;
+      }
+      .right-btn {
+        @apply bg-sky-500 -right-3;
+      }
+      .tab-content {
+        @apply max-w-4xl mx-auto mt-5;
+      }
+      .tab-content .tab {
+        transform: translateX(25px);
+        content-visibility: hidden;
+        opacity: 0;
+      }
+      .tab-content .tab.active {
+        transform: translateX(0px);
+        content-visibility: visible;
+        opacity: 1;
+        transition: 1s ease;
+      }
+      .tab-content .tab .tab-card {
+        @apply bg-slate-800 mb-1 p-5 rounded-md border-b-2 border-slate-700;
+      }
+      .tab-content .tab .tab-card h1 {
+        @apply text-slate-400 text-3xl font-medium mb-2;
+      }
+      .tab-content .tab .tab-card p {
+        @apply text-slate-600 text-sm leading-[24px];
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <section class="main-container relative">
+        <div class="tab-nav-bar">
+          <div class="tab-navigation">
+            <ion-icon name="chevron-back-outline" class="left-btn"></ion-icon>
+            <ion-icon
+              name="chevron-forward-outline"
+              class="right-btn"
+            ></ion-icon>
+            <div class="tab-menu">
+              <div class="tab-btn active">Tokyo</div>
+              <div class="tab-btn">Cairo</div>
+              <div class="tab-btn">Rome</div>
+              <div class="tab-btn">Paris</div>
+              <div class="tab-btn">Mexico City</div>
+              <div class="tab-btn">Florence</div>
+              <div class="tab-btn">New York</div>
+              <div class="tab-btn">Moscow</div>
+              <div class="tab-btn">Sydney</div>
+              <div class="tab-btn">San Francisco</div>
+              <div class="tab-btn">Amsterdam</div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="tab active">
+            <div class="tab-card">
+              <h1>Tokyo</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequatur cum, aspernatur tenetur voluptates, veniam autem
+                voluptatem amet adipisci! Vel accusamus delectus necessitatibus
+                deleniti amet esse reprehenderit, vitae. Eos velit at rerum iste
+                consequuntur sequi, veritatis vel eligendi commodi
+                necessitatibus! Iste sequi temporibus, totam aspernatur?
+                Adipisci facilis tempore, commodi praesentium aliquam. Quos
+                asperiores earum, delectus doloribus praesentium voluptatibus
+                porro libero, explicabo, et recusandae illo expedita nobis nulla
+                esse voluptatum repellat inventore. Quos et saepe earum? Ratione
+                eius alias, aut ducimus dolorum sunt harum nemo. Non sit dolor
+                corporis laboriosam natus ex! Corrupti tenetur nostrum,
+                doloribus quis eligendi ea veritatis pariatur deserunt.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Cairo</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
+                perferendis eligendi tempore dignissimos labore. Cumque quasi
+                in, assumenda, laboriosam minima eligendi ducimus quis odio.
+                Sapiente harum id quod eligendi impedit quidem debitis sed
+                quibusdam eos placeat repellat expedita nesciunt dolores,
+                nostrum, natus mollitia praesentium eum nihil illum libero.
+                Ipsa, dolorem nisi quia reprehenderit provident dolore accusamus
+                neque aut nostrum nihil eveniet vero, quaerat voluptates laborum
+                magnam! Sapiente, impedit fuga, ipsum aliquid ratione beatae
+                suscipit quisquam est fugit, nisi quos obcaecati. Sint animi, id
+                nobis eveniet aperiam unde similique in numquam suscipit. Alias
+                sequi velit perspiciatis aliquid tempore, rem cum fugit.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Rome</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+                ex tempore nulla beatae, soluta placeat fugit impedit id commodi
+                dolorem quam dolor, doloremque nisi et ratione distinctio
+                perferendis sit! Nemo nisi minus cumque id voluptatem similique,
+                pariatur veritatis, cupiditate, unde mollitia quia sed. Qui
+                ipsam, accusantium possimus voluptas alias expedita rem
+                voluptates quaerat ullam consequatur sint architecto blanditiis,
+                facere quo, perspiciatis ad. Cupiditate similique atque,
+                suscipit nesciunt. Consequatur quisquam fugiat eveniet sint
+                delectus hic quia dolorem blanditiis aperiam, unde rerum
+                accusamus explicabo nulla, enim vel similique, libero ipsum in
+                qui quasi optio incidunt alias magnam. Ab veniam vitae maxime
+                perferendis.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Paris</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                minima maxime quas odit laboriosam, recusandae voluptate facilis
+                distinctio, aliquid quae autem inventore, non repellendus est
+                ullam vel dolor debitis nisi, quidem aut totam sequi neque harum
+                velit? Dolorum dolore quibusdam quas eos sint! Tempora nesciunt,
+                alias blanditiis tenetur odit perferendis, numquam autem, sunt
+                natus impedit repellendus excepturi modi optio ipsam aliquam
+                suscipit dignissimos voluptates nihil illum. Distinctio
+                perspiciatis cumque pariatur voluptatem quas culpa eos a,
+                assumenda quia quos praesentium fugiat, quis impedit. Ipsum
+                harum magni, delectus iusto tempora dolore illum, vitae
+                molestiae saepe, asperiores aliquid ipsam nulla nam earum,
+                consectetur.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Mexico City</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+                dolor voluptate ullam in, accusantium eius nisi similique earum
+                accusamus. Eveniet est, excepturi amet, explicabo, velit iure
+                maxime ut magni sunt itaque laborum pariatur accusamus. Harum,
+                minus tenetur. At pariatur adipisci deserunt eos quaerat
+                similique ipsa dolor commodi recusandae. Dolor minima fugiat
+                cupiditate consequuntur molestiae suscipit velit laudantium
+                voluptate deleniti ad aliquid odio harum accusantium id
+                inventore voluptas sequi, quae aliquam nulla quos labore
+                expedita eaque ipsam. Et accusantium expedita, accusamus
+                pariatur obcaecati nihil at a consequatur, rem porro
+                reprehenderit architecto officia! Necessitatibus laboriosam
+                maxime consectetur! Distinctio rerum nam dolor iste.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Florence</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
+                fugit possimus odit voluptates similique earum, ex unde nihil
+                rem, ea provident magnam, est quae doloribus eaque quasi facilis
+                inventore ullam quidem alias ducimus. Rem doloremque veritatis
+                iste eveniet nihil laborum, voluptatibus consectetur nobis vel.
+                Necessitatibus facilis qui, error cum adipisci velit. Quam eius
+                numquam itaque ad atque, quibusdam repellendus, molestias nisi
+                in explicabo quod sequi eligendi consequuntur ratione
+                necessitatibus impedit. Perferendis doloribus quam minus,
+                corporis, velit cumque odit saepe dolor accusantium beatae
+                nihil, nisi at similique expedita hic assumenda sunt voluptatum?
+                Doloribus nisi distinctio voluptatem tempora. Ipsum culpa,
+                incidunt atque.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>New York</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Officiis at, minus nemo blanditiis nisi cupiditate, voluptas ab
+                alias laboriosam dolor, provident distinctio voluptates, aliquid
+                commodi fuga pariatur ipsam inventore culpa harum nulla quae.
+                Consequuntur ex modi, vitae labore in et dolorem voluptas
+                quaerat. Atque quibusdam ad architecto quis accusamus corporis
+                quia. Minus corporis repellendus, suscipit vel magni? Eligendi,
+                reiciendis nostrum. Minus in, ad quas rerum nostrum voluptatibus
+                qui praesentium facilis consequuntur laudantium illo enim. Quo
+                excepturi ipsa optio fuga vel minus magnam itaque dicta ad,
+                suscipit non harum quidem, aspernatur, reiciendis fugiat dolorum
+                culpa deserunt. Voluptatem quod perferendis asperiores. Culpa.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Moscow</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
+                optio consequatur culpa accusantium nemo recusandae vero
+                repellendus! Laboriosam ex non quis aperiam error ratione
+                consequatur inventore maxime, obcaecati natus praesentium,
+                voluptates est dolorem assumenda vitae voluptatem animi aliquid
+                illo quas? Suscipit repellendus error nulla adipisci iure quo
+                porro, neque obcaecati molestias! Facere aliquam quasi nostrum
+                inventore ut magni, rerum ab id nemo blanditiis ipsa provident
+                cupiditate ipsam fugiat sunt sequi rem quod velit tempore, earum
+                ullam modi et repudiandae debitis esse. Voluptate culpa tenetur,
+                magni porro perferendis tempore itaque rem commodi tempora
+                atque? Repellendus perferendis rerum sint sed, aliquam unde.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Sydney</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+                deserunt est pariatur nemo fuga, natus quod recusandae iste
+                distinctio vitae ullam, voluptatem beatae odit. Tenetur esse,
+                illo qui fugiat unde deserunt quis magni dolor enim laudantium
+                assumenda, a ullam totam delectus sint ex neque. Mollitia est
+                magnam nulla impedit ipsum at nam assumenda ex praesentium
+                animi, commodi, nostrum, fuga consequatur amet facilis similique
+                ducimus, cupiditate et! Dolorum minima incidunt quos soluta hic,
+                dolor assumenda placeat aut accusamus impedit, nam voluptatibus
+                dicta iure, ipsum necessitatibus omnis cupiditate sunt quasi!
+                Quo nihil cum id aliquam adipisci rerum itaque eveniet. Maiores,
+                rerum, eum?
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>San Francisco</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
+                a neque natus facilis officiis eius corrupti, perferendis
+                asperiores sequi unde quo officia non quia ducimus, ullam
+                deserunt consectetur ab consequuntur iure adipisci alias dolorem
+                vero ipsa nulla. Veniam aliquid inventore voluptatum vitae sed
+                nostrum alias eligendi tempore officia exercitationem cumque ab,
+                possimus odit aliquam sit qui beatae? Officia maxime animi
+                corporis atque minima voluptatibus laborum voluptatem rerum
+                consectetur, ipsa officiis reprehenderit voluptates velit error
+                debitis quasi quibusdam accusamus? Quae nobis sed, temporibus
+                rem nulla eveniet dolore. Ipsum, velit corporis sed ex quos
+                voluptatem amet perferendis maxime earum atque accusantium
+                impedit.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-card">
+              <h1>Amsterdam</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ducimus quo, dolorem iste laborum. Dolorum cumque ut ipsa quidem
+                vitae, ducimus eligendi distinctio sed fugiat dolore iure earum
+                modi rem, recusandae, dolorem veniam in accusantium sequi natus
+                excepturi assumenda. Sit, debitis maxime ullam illo autem facere
+                dolores provident sed tempore voluptates, esse molestias
+                repellat ex, iste modi. Blanditiis quis eaque numquam maxime
+                dicta, repudiandae rerum, commodi dolores in dignissimos sit
+                voluptas neque repellat ratione! Earum maiores nisi voluptas
+                alias perspiciatis vero aperiam obcaecati beatae libero in
+                adipisci maxime soluta et amet numquam, laborum ea blanditiis
+                doloremque a saepe exercitationem distinctio possimus?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!--    main script-->
+    <script>
+      const btnLeft = document.querySelector(".left-btn");
+      const btnRight = document.querySelector(".right-btn");
+      const tabMenu = document.querySelector(".tab-menu");
+
+      const IconVisibility = () => {
+        let scrollLeftValue = Math.ceil(tabMenu.scrollLeft);
+
+        let scrollableWidth = tabMenu.scrollWidth - tabMenu.clientWidth;
+
+        btnLeft.style.display = scrollLeftValue > 0 ? "block" : "none";
+
+        btnRight.style.display =
+          scrollableWidth > scrollLeftValue ? "block" : "none";
+      };
+
+      btnRight.addEventListener("click", () => {
+        tabMenu.scrollLeft += 150;
+        // IconVisibility();
+        setTimeout(() => IconVisibility(), 250);
+      });
+      btnLeft.addEventListener("click", () => {
+        tabMenu.scrollLeft -= 150;
+        // IconVisibility();
+        setTimeout(() => IconVisibility(), 250);
+      });
+      window.onload = function () {
+        btnRight.style.display =
+          tabMenu.scrollWidth > tabMenu.clientWidth ||
+          tabMenu.scrollWidth >= window.innerWidth
+            ? "block"
+            : "none";
+
+        btnLeft.style.display =
+          tabMenu.scrollWidth >= window.innerWidth ? " " : "none";
+      };
+      window.onresize = function () {
+        btnRight.style.display =
+          tabMenu.scrollWidth > tabMenu.clientWidth ||
+          tabMenu.scrollWidth >= window.innerWidth
+            ? "block"
+            : "none";
+        btnLeft.style.display =
+          tabMenu.scrollWidth >= window.innerWidth ? " " : "none";
+        let scrollLeftValue = Math.round(tabMenu.scrollLeft);
+        btnLeft.style.display = scrollLeftValue > 0 ? "block" : "none";
+      };
+      let activeDarag = false;
+      tabMenu.addEventListener("mousemove", (drag) => {
+        if (!activeDarag) return;
+        tabMenu.scrollLeft -= drag.movementX;
+        IconVisibility();
+        tabMenu.classList.add("dragging");
+      });
+      tabMenu.addEventListener("mouseup", (drag) => {
+        activeDarag = false;
+        tabMenu.classList.add("dragging");
+      });
+      tabMenu.addEventListener("mousedown", (drag) => {
+        activeDarag = true;
+      });
+      const tabs = document.querySelectorAll(".tab");
+      const tabBtns = document.querySelectorAll(".tab-btn");
+
+      const tab_Nav = function (tabBtnClick) {
+        tabBtns.forEach((tabtn) => {
+          tabtn.classList.remove("active");
+        });
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        tabBtns[tabBtnClick].classList.add("active");
+        tabs[tabBtnClick].classList.add("active");
+      };
+      tabBtns.forEach((tabtn, i) => {
+        tabtn.addEventListener("click", () => {
+          tab_Nav(i);
+        });
+      });
+    </script>
+  </body>
+</html>
